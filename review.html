@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link rel="stylesheet" href="SeniorProjectStyle.css">
+</head>
+<body id="reviewBody">
+    <header><a href="index.html">Return to main page</a></header>
+    <form action="" id ="reviewForm">
+        <h1>Review our website!</h1>
+        <br>
+        <label for="firstName"><h2>First Name:</h2></label>
+        <input type="text" id="firstName" name="firstName" required>
+        <br>
+        <label for="lastName"><h2>Last Name:</h2></label>
+        <input type="text" id="lastName" name="lastName" required>
+        <br>
+        <label for="email"><h2>E-mail:</h2></label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="rating"><h2>Rating (1-5):</h2></label>
+        <input type="number" id="rating" name="rating" min="1" max="5" required>
+        <br>
+        <label for="feedback"><h2>Feedback</h2></label>
+        <br>
+        <textarea id="feedback" name="feedback" rows="8" cols="40" required></textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src= "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
+    <script src="./reviewScript.js"></script>
+   
+    
+</body>
+
+
+</html>

@@ -1,42 +1,52 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyD0nfjlGL9q9JgUkiXewXBzYlV9SEKAN6I",
-    authDomain: "reviewform-sp.firebaseapp.com",
-    databaseURL: "https://reviewform-sp-default-rtdb.firebaseio.com",
-    projectId: "reviewform-sp",
-    storageBucket: "reviewform-sp.appspot.com",
-    messagingSenderId: "498306699144",
-    appId: "1:498306699144:web:ef07c654d20fabc986f43d"
-  };
-
-  firebase.initializeApp(firebaseConfig);
+  apiKey: "AIzaSyCaIFpjA5ZIFH1zx4oacd_nG0jp3oRt8cE",
+  authDomain: "review-6a8c7.firebaseapp.com",
+  databaseURL: "https://review-6a8c7-default-rtdb.firebaseio.com",
+  projectId: "review-6a8c7",
+  storageBucket: "review-6a8c7.appspot.com",
+  messagingSenderId: "475647470119",
+  appId: "1:475647470119:web:f84e862202b692fcf5fc02"
+};
 
 
-  var reviewFormDB = firebase.database().ref("reviewForm");
 
-  document.getElementById("reviewForm").addEventListener("submit", submitForm);
+firebase.initializeApp(firebaseConfig);
 
-  function submitForm(e) {
-    e.preventDefault();
+const reviewFormDB = firebase.database().ref("reviewForm");
+
+
+const getElementVal = (id) => {
+  return document.getElementById(id).value;
+};
+
+
+const saveReview = (firstName, lastName, email, rating, feedback) => {
+  const newReviewForm = reviewFormDB.push();
+
+  newReviewForm.set({
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    rating: rating,
+    feedback: feedback,
+  });
+};
+
+document.getElementById("reviewForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
   
-    var firstName = getElementVal("firstName");
-    var lastName = getElementVal("lastName");
-    var email = getElementVal("email");
-    var rating = getElementVal("rating");
-    var feedback = getElementVal("feedback");
+  const firstName = getElementVal("firstName");
+  const lastName = getElementVal("lastName");
+  const email = getElementVal("email");
+  const rating = getElementVal("rating");
+  const feedback = getElementVal("feedback");
 
-    saveMessages = (firstName, lastName, email, rating, feedback )
-
-  }
-
-  const saveMessages = (firstName, lastName, email, rating, feedback ) => {
-    var newContactForm = contactFormDB.push();
   
-    newContactForm.set({
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      name: name,
-      rating: rating,
-      feedback: feedback,
-    });
-  };
+  saveReview(firstName, lastName, email, rating, feedback);
+
+
+  document.getElementById("reviewForm").reset();
+});
+
+

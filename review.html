@@ -30,8 +30,14 @@
         <button type="submit">Submit</button>
     </form>
 
-    <script src= "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
-    <script src="./reviewScript.js"></script>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js'
+    
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js'
+    
+        import { getAuth } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js'
+        import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js'
+      </script>
    
     
 </body>

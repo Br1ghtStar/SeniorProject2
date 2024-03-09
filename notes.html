@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Notes</title>
+    <link rel="stylesheet" href="index2.css">
+</head>
+<body id="notesBody">
+    <header>
+        <a href="index.html">Return to main page</a>
+        <h1>Notes</h1>
+    </header>
+    <h2>Please enter any notes that you want saved regarding your trip here!</h2>
+    <p>Some examples of things to keep notes on:
+        <ul>
+            <li>restaurants that are close by</li>
+            <li>popular attractions in the area</li>
+            <li>or something you may want to see</li>
+        </ul>
+    </p>
+    <form action="notes.php" method="post">
+        <div class="form-input">
+            <label for="location">Location</label>
+            <input name="location" id="location" type="text" required>
+        </div>
+        
+        <div class="form-input">
+            <label for="notes">Notes</label>
+            <input name="notes" id="notes" type="text" aria-rowspan="5" aria-colspan="25" placeholder="Write a Note...">
+        </div>
+    </form>
+    
+    <p>Location: <input id="locationInput" type="text"></p>
+    <p>Notes</p>
+    <textarea id="noteInput" rows="5" cols="25" placeholder="Write a Note..."></textarea>
+    <button id="noteButton">Submit</button>
+    <ul id="noteList"></ul>
+    
+    <script src="noteScript.js"></script>
+    
+
+</body>
+</html>

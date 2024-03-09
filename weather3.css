@@ -1,0 +1,100 @@
+body {
+    background: #3498db; /* Blue background color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#weather-container {
+    background: rgba(255, 255, 255, 0.9);
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+h2, label, p {
+    color: #2c3e50; 
+    margin: 8px 0;
+}
+
+input,
+select {
+    width: calc(100% - 16px);
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #2c3e50;
+    margin-top: 10px;
+}
+
+button {
+    background: #2ecc71; 
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #27ae60; 
+}
+
+#temp-div p {
+    font-size: 36px;
+    margin-top: -10px;
+    color: #e74c3c; /* Red temperature color */
+}
+
+#weather-info {
+    font-size: 18px;
+    color: #34495e; /* Dark gray weather info color */
+}
+
+#weather-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    display: none;
+}
+
+select {
+    appearance: none; /* Remove default appearance on some browsers */
+    -webkit-appearance: none; /* Remove default appearance on Webkit browsers */
+    -moz-appearance: none; /* Remove default appearance on Mozilla browsers */
+    background: #ecf0f1; /* Light gray background */
+    color: #2c3e50; /* Dark gray text color */
+}
+
+select::after {
+    content: '\25BC'; /* Unicode character for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #2c3e50; /* Dark gray arrow color */
+}
+
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+
+@media (max-width: 600px) {
+    #weather-container {
+        width: 90%;
+    }
+}

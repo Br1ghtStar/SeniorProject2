@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weather3.css">
+</head>
+<body>
+    <div id="weather-container">
+        <h2>Weather App</h2>
+        
+        <label for="city">Select a city:</label>
+        <select id="city">
+            <option value="Tampa">Tampa</option>
+            <option value="London">London</option>
+            <option value="New York">New York</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="Berlin">Berlin</option>
+            <option value="Dubai">Dubai</option>
+            <option value="San Francisco">San Francisco</option>
+
+        </select>
+        
+        <label for="date">Select a date:</label>
+        <select id="date"></select>
+
+        <label for="unit">Select temperature unit:</label>
+        <select id="unit">
+            <option value="metric">Celsius</option>
+            <option value="imperial">Fahrenheit</option>
+        </select>
+
+        <button onclick="getWeather()">Get Weather</button>
+
+        <img id="weather-icon" alt="Weather Icon">
+
+        <div id="temp-div"></div>
+
+        <div id="weather-info"></div>
+    </div>
+    <script src="weatherScript3.js"></script>
+</body>
+</html>
